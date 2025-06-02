@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Awesome Product - Dark Mode</title>
+  <title>Samy Adel | Graphic & UI/UX Designer</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -36,6 +36,7 @@
       width: 90%;
       max-width: 1100px;
       margin: auto;
+      padding: 0 15px;
     }
 
     /* Navbar */
@@ -79,16 +80,25 @@
     .hero {
       background: #222;
       color: var(--text-color);
-      padding: 100px 0;
+      padding: 100px 0 80px;
       text-align: center;
     }
-    .hero h2 {
-      font-size: 2.5rem;
+    .hero img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid var(--accent-color);
+    }
+    .hero h1 {
+      font-size: 3rem;
       margin-bottom: 10px;
     }
     .hero p {
       font-size: 1.2rem;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      color: #ccc;
     }
     .btn {
       background: var(--btn-bg);
@@ -104,110 +114,103 @@
       background: var(--btn-hover);
     }
 
-    /* Features */
-    .features {
+    /* About Section */
+    .about {
       padding: 60px 0;
       background: var(--bg-color);
     }
-    .features h2 {
+    .about h2 {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
-    .feature-cards {
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .card {
-      flex: 1;
-      min-width: 250px;
-      background: var(--card-bg);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(255,255,255,0.05);
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h3 {
-      margin-bottom: 10px;
-      color: var(--accent-color);
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 1.1rem;
     }
 
-    /* Pricing */
-    .pricing {
+    /* Skills Section */
+    .skills {
       padding: 60px 0;
       background: #1a1a1a;
     }
-    .pricing h2 {
+    .skills h2 {
       text-align: center;
       margin-bottom: 40px;
     }
-    .price-cards {
+    .skill-list {
       display: flex;
+      justify-content: center;
       gap: 20px;
-      justify-content: space-between;
       flex-wrap: wrap;
     }
-    .price-card {
-      flex: 1;
-      min-width: 250px;
+    .skill {
       background: var(--card-bg);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(255,255,255,0.05);
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-    .price-card:hover {
-      transform: translateY(-5px);
-    }
-    .price-card.recommended {
-      border: 2px solid var(--accent-color);
-      background: #2b2b2b;
-    }
-    .price {
-      font-size: 1.8rem;
-      margin: 10px 0;
+      padding: 15px 25px;
+      border-radius: 25px;
+      font-weight: 500;
       color: var(--accent-color);
-    }
-    .price-card ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 20px;
-      color: #ccc;
-    }
-    .price-card li {
-      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
-    /* Contact */
+    /* Projects Section */
+    .projects {
+      padding: 60px 0;
+      background: var(--bg-color);
+    }
+    .projects h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .project-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .project-card .info {
+      padding: 15px;
+    }
+
+    /* Contact Section */
     .contact {
       padding: 60px 0;
       text-align: center;
-      background: #181818;
+      background: #1a1a1a;
+    }
+    .contact h2 {
+      margin-bottom: 20px;
     }
     .contact form {
+      max-width: 500px;
+      margin: auto;
       display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 15px;
     }
-    .contact input {
-      padding: 10px 15px;
+    .contact input,
+    .contact textarea {
+      padding: 10px;
       border-radius: 5px;
       border: 1px solid #444;
       background: #222;
       color: var(--text-color);
-      width: 300px;
     }
     .contact button {
       background: var(--btn-bg);
       color: white;
-      padding: 10px 20px;
+      padding: 12px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -221,6 +224,13 @@
       padding: 20px 0;
     }
 
+    .social-links a {
+      color: var(--text-color);
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .nav-links, .toggle-switch {
@@ -228,17 +238,11 @@
         text-align: center;
         margin-top: 10px;
       }
-      .feature-cards,
-      .price-cards {
-        flex-direction: column;
+      .hero h1 {
+        font-size: 2.2rem;
       }
-      .contact form {
-        flex-direction: column;
-        align-items: center;
-      }
-      .contact input {
-        width: 100%;
-        margin-bottom: 10px;
+      .hero p {
+        font-size: 1rem;
       }
     }
   </style>
@@ -248,14 +252,15 @@
   <!-- Header -->
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">BrandName</h1>
+      <h1 class="logo">Samy Adel</h1>
       <label class="toggle-switch">
         🌞 <input type="checkbox" id="themeToggle" checked /> <span>🌙</span>
       </label>
       <nav>
         <ul class="nav-links">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -265,67 +270,60 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h2>Launch Your Product with Style</h2>
-      <p>Beautifully designed landing page built with HTML & CSS.</p>
-      <a href="#contact" class="btn">Get Started</a>
+      <img src="https://via.placeholder.com/150"  alt="Samy Adel Photo">
+      <h1>Hello, I'm Samy Adel</h1>
+      <p>Graphic Designer & UI/UX Designer passionate about creating beautiful and functional digital experiences.</p>
+      <a href="#contact" class="btn">Hire Me</a>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
+  <!-- About Section -->
+  <section id="about" class="about">
     <div class="container">
-      <h2>Key Features</h2>
-      <div class="feature-cards">
-        <div class="card">
-          <h3>Responsive Design</h3>
-          <p>Looks great on all devices, from phones to desktops.</p>
-        </div>
-        <div class="card">
-          <h3>Clean UI</h3>
-          <p>Modern and minimalist interface for better user experience.</p>
-        </div>
-        <div class="card">
-          <h3>Fast & Lightweight</h3>
-          <p>No frameworks, pure HTML & CSS — fast loading time.</p>
-        </div>
+      <h2>About Me</h2>
+      <p>
+        I’m a creative designer specializing in graphic design and user experience design.
+        With a strong eye for aesthetics and usability, I bring ideas to life through clean visuals and intuitive interfaces.
+        Whether it's branding, web design, or product development, I aim to deliver quality and creativity in every project.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <div class="skill">UI/UX Design</div>
+        <div class="skill">Graphic Design</div>
+        <div class="skill">Adobe Creative Suite</div>
+        <div class="skill">Figma</div>
+        <div class="skill">Wireframing</div>
+        <div class="skill">Prototyping</div>
+        <div class="skill">Branding</div>
+        <div class="skill">HTML/CSS</div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Section -->
-  <section id="pricing" class="pricing">
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
     <div class="container">
-      <h2>Pricing Plans</h2>
-      <div class="price-cards">
-        <div class="price-card">
-          <h3>Basic</h3>
-          <p class="price">$9/mo</p>
-          <ul>
-            <li>1 User</li>
-            <li>10 GB Storage</li>
-            <li>Email Support</li>
-          </ul>
-          <a href="#" class="btn small">Choose Plan</a>
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150"  alt="Project 1">
+          <div class="info">
+            <h3>Project Title 1</h3>
+            <p>Short description of the project and your role in it.</p>
+          </div>
         </div>
-        <div class="price-card recommended">
-          <h3>Pro</h3>
-          <p class="price">$29/mo</p>
-          <ul>
-            <li>10 Users</li>
-            <li>100 GB Storage</li>
-            <li>Priority Support</li>
-          </ul>
-          <a href="#" class="btn small">Choose Plan</a>
-        </div>
-        <div class="price-card">
-          <h3>Enterprise</h3>
-          <p class="price">$99/mo</p>
-          <ul>
-            <li>Unlimited Users</li>
-            <li>1 TB Storage</li>
-            <li>Dedicated Support</li>
-          </ul>
-          <a href="#" class="btn small">Choose Plan</a>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150"  alt="Project 2">
+          <div class="info">
+            <h3>Project Title 2</h3>
+            <p>Short description of the project and your role in it.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -334,11 +332,12 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Stay in Touch</h2>
-      <p>Subscribe to our newsletter or contact us directly.</p>
-      <form>
-        <input type="email" placeholder="Your email address" required />
-        <button type="submit" class="btn">Subscribe</button>
+      <h2>Let's Work Together</h2>
+      <form action="mailto:samyadel.eg@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn">Send Message</button>
       </form>
     </div>
   </section>
@@ -346,7 +345,12 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 BrandName. All rights reserved.</p>
+      <p>&copy; 2025 Samy Adel. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/samyadeleg/"  target="_blank">LinkedIn</a>
+        <a href="https://www.behance.net/samyadeleg"  target="_blank">Behance</a>
+        <a href="mailto:samyadel.eg@gmail.com">Email</a>
+      </div>
     </div>
   </footer>
 
