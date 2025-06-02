@@ -9,8 +9,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg-color: #ffffff; 
+  /* Animated Background */
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #ffffff, #f0f0f0, #e0e0e0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    transition: color 0.3s;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Theme Variables */
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f9f9f9;
+    --accent-color: #000000;
+    --btn-bg: linear-gradient(135deg, #000000, #333333);
+    --btn-hover: linear-gradient(135deg, #222222, #555555);
+    --transition-speed: 0.3s;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f4f4f4;
+    --card-bg: #1e1e1e;
+    --accent-color: #ffffff;
+    --btn-bg: linear-gradient(135deg, #ffffff, #cccccc);
+    --btn-hover: linear-gradient(135deg, #eeeeee, #999999);
+    background: linear-gradient(-45deg, #121212, #1a1a1a, #1e1e1e);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+
       --text-color: #000000;
       --card-bg: #f9f9f9;
       --accent-color: #000000;
