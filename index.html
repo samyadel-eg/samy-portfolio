@@ -535,6 +535,267 @@
         </a>
       </div>
   </section>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samy Adel | Graphic & UI/UX Designer</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* Theme Variables */
+    :root {
+      --bg-color: #ffffff; 
+      --text-color: #000000;
+      --card-bg: #f9f9f9;
+      --accent-color: #000000;
+      --btn-bg: linear-gradient(135deg, #000000, #333333);
+      --btn-hover: linear-gradient(135deg, #222222, #555555);
+      --transition-speed: 0.3s;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #f4f4f4;
+      --card-bg: #1e1e1e;
+      --accent-color: #ffffff;
+      --btn-bg: linear-gradient(135deg, #ffffff, #cccccc);
+      --btn-hover: linear-gradient(135deg, #eeeeee, #999999);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background var(--transition-speed), color var(--transition-speed);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 15px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+
+    /* Software & Tools Section */
+    .software {
+      padding: 80px 0;
+      background: var(--bg-color);
+    }
+
+    .software h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .tool-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .tool-icon {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .tool-card:hover .tool-icon {
+      transform: scale(1.1) rotate(10deg);
+      filter: brightness(1.2);
+    }
+
+    .tool-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .tool-card p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+      margin-bottom: 15px;
+    }
+
+    /* Proficiency Bars */
+    .progress-bar {
+      height: 8px;
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar span {
+      display: block;
+      height: 100%;
+      background: var(--accent-color);
+      width: 0;
+      border-radius: 20px;
+      transition: width 1s ease-in-out;
+    }
+
+    .tool-card.in-view .progress-bar span {
+      animation: growBar 1s forwards;
+    }
+
+    @keyframes growBar {
+      from { width: 0%; }
+      to { width: var(--percent); }
+    }
+
+    [data-aos] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    [data-aos].aos-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="dark-mode">
+
+<!-- Other sections remain unchanged -->
+
+<!-- Software & Tools Section -->
+<section id="software" class="software" data-aos>
+  <div class="container">
+    <h2>Software & Tools</h2>
+    <p class="section-description">I'm proficient in the following design and development tools:</p>
+    <div class="tool-grid">
+
+      <!-- Adobe Photoshop -->
+      <div class="tool-card">
+        <img src="https://cdn.pixabay.com/photo/2017/05/15/23/47/multimedia-2317651_1280.png"  alt="Adobe Photoshop" class="tool-icon" />
+        <h3>Adobe Photoshop</h3>
+        <p>I use Photoshop for photo editing, UI design, and creating high-quality visuals for digital and print media.</p>
+        <div class="progress-bar"><span style="--percent: 90%;"></span></div>
+      </div>
+
+      <!-- Adobe Illustrator -->
+      <div class="tool-card">
+        <img src="https://cdn.pixabay.com/photo/2017/05/15/23/47/adobe-illustrator-2317650_1280.png"  alt="Adobe Illustrator" class="tool-icon" />
+        <h3>Adobe Illustrator</h3>
+        <p>Vector graphics editor used for logo creation, brand assets, and scalable illustrations.</p>
+        <div class="progress-bar"><span style="--percent: 85%;"></span></div>
+      </div>
+
+      <!-- Adobe InDesign -->
+      <div class="tool-card">
+        <img src="https://cdn.pixabay.com/photo/2017/05/15/23/47/adobe-indesign-2317649_1280.png"  alt="Adobe InDesign" class="tool-icon" />
+        <h3>Adobe InDesign</h3>
+        <p>InDesign is my go-to for layout design, brochures, and multi-page print projects.</p>
+        <div class="progress-bar"><span style="--percent: 80%;"></span></div>
+      </div>
+
+      <!-- Adobe After Effects -->
+      <div class="tool-card">
+        <img src="https://cdn.pixabay.com/photo/2017/05/15/23/47/video-editing-2317652_1280.png"  alt="Adobe After Effects" class="tool-icon" />
+        <h3>Adobe After Effects</h3>
+        <p>Used for motion graphics, animations, and visual effects in video production.</p>
+        <div class="progress-bar"><span style="--percent: 70%;"></span></div>
+      </div>
+
+      <!-- Adobe Premiere Pro -->
+      <div class="tool-card">
+        <img src="https://cdn.pixabay.com/photo/2017/05/15/23/47/video-editing-2317653_1280.png"  alt="Adobe Premiere Pro" class="tool-icon" />
+        <h3>Adobe Premiere Pro</h3>
+        <p>I edit videos professionally using Premiere Pro — ideal for storytelling and social media content.</p>
+        <div class="progress-bar"><span style="--percent: 75%;"></span></div>
+      </div>
+
+      <!-- Adobe XD -->
+      <div class="tool-card">
+        <img src="https://cdn.pixabay.com/photo/2017/05/15/23/47/ui-design-2317655_1280.png"  alt="Adobe XD" class="tool-icon" />
+        <h3>Adobe XD</h3>
+        <p>I use Adobe XD for UI/UX wireframing, prototyping, and interface mockups.</p>
+        <div class="progress-bar"><span style="--percent: 80%;"></span></div>
+      </div>
+
+      <!-- Lightroom -->
+      <div class="tool-card">
+        <img src="https://cdn.pixabay.com/photo/2017/05/15/23/47/lightroom-2317656_1280.png"  alt="Adobe Lightroom" class="tool-icon" />
+        <h3>Adobe Lightroom</h3>
+        <p>I edit photos using Lightroom — perfect for quick edits and batch processing.</p>
+        <div class="progress-bar"><span style="--percent: 75%;"></span></div>
+      </div>
+
+      <!-- Figma -->
+      <div class="tool-card">
+        <img src="https://cdn.pixabay.com/photo/2017/05/15/23/47/figma-2317657_1280.png"  alt="Figma" class="tool-icon" />
+        <h3>Figma</h3>
+        <p>My main tool for collaborative UI/UX design, real-time feedback, and responsive web design.</p>
+        <div class="progress-bar"><span style="--percent: 85%;"></span></div>
+      </div>
+
+      <!-- CorelDRAW -->
+      <div class="tool-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/CorelDRAW.svg/512px-CorelDRAW.svg.png"  alt="CorelDRAW" class="tool-icon" />
+        <h3>CorelDRAW</h3>
+        <p>Used for vector illustration and layout design — especially for print and packaging design.</p>
+        <div class="progress-bar"><span style="--percent: 70%;"></span></div>
+      </div>
+
+      <!-- DaVinci Resolve -->
+      <div class="tool-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DaVinci_Resolve_Icon.svg/512px-DaVinci_Resolve_Icon.svg.png"  alt="DaVinci Resolve" class="tool-icon" />
+        <h3>DaVinci Resolve</h3>
+        <p>My preferred choice for advanced video editing and color grading in cinematic projects.</p>
+        <div class="progress-bar"><span style="--percent: 65%;"></span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Add animation when scrolling into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.tool-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+</body>
+</html>
 <!-- Certificates Section -->
 <section id="certificates" class="certificates" data-aos>
   <div class="container">
