@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Samy Adel | Graphic & UI/UX Designer</title>
 
@@ -28,12 +27,6 @@
       --accent-color: #ffffff;
       --btn-bg: linear-gradient(135deg, #ffffff, #cccccc);
       --btn-hover: linear-gradient(135deg, #eeeeee, #999999);
-      .linkedin .fab.fa-linkedin {
-  color: #0077B5;
-        .behance .fab.fa-behance {
-  color: #1769FF;
-          .email .fas.fa-envelope {
-  color: #D14836;
     }
 
     * {
@@ -397,32 +390,18 @@
       padding: 40px 0 20px;
     }
 
-   /* Social Buttons */
-.social-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
+    .social-links a {
+      color: var(--text-color);
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--transition-speed);
+    }
 
-.social-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--card-bg);
-  color: var(--text-color);
-  padding: 10px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-}
+    .social-links a:hover {
+      color: var(--accent-color);
+    }
 
-.social-btn:hover {
-  background: var(--accent-color);
-  color: var(--bg-color);
-}
     /* Animations */
     [data-aos] {
       opacity: 0;
@@ -455,17 +434,6 @@
 .social-buttons a:hover {
   background: var(--accent-color);
   color: var(--bg-color);
-}
-    .linkedin .fab.fa-linkedin {
-  color: #0077B5;
-}
-
-.behance .fab.fa-behance {
-  color: #1769FF;
-}
-
-.email .fas.fa-envelope {
-  color: #D14836;
 }
   </style>
 </head>
@@ -681,23 +649,15 @@
 
   <!-- Footer -->
   <footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 Samy Adel. All rights reserved.</p>
-    <div class="social-buttons">
-      <a href="https://www.linkedin.com/in/samyadeleg/"  target="_blank" class="social-btn linkedin">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://www.behance.net/samyadeleg"  target="_blank" class="social-btn behance">
-        <i class="fab fa-behance"></i> Behance
-      </a>
-      <a href="mailto:samyadel.eg@gmail.com" class="social-btn email">
-        <i class="fas fa-envelope"></i> Email
-      </a>
+    <div class="container">
+      <p>&copy; 2025 Samy Adel. All rights reserved.</p>
+      <div class="social-buttons">
+  <a href="https://www.linkedin.com/in/samyadeleg/"  target="_blank">LinkedIn</a>
+  <a href="https://www.behance.net/samyadeleg"  target="_blank">Behance</a>
+  <a href="mailto:samyadel.eg@gmail.com">Email</a>
+</div>
     </div>
-    
-  </div>
-    
-</footer>
+  </footer>
 
   <script>
     // Smooth scroll
